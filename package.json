@@ -1,0 +1,29 @@
+{
+  "name": "forwarder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./dist/main.js",
+    "build": "tsc",
+    "test": "ts-node ./test/mock/register.ts",
+    "dev": "nodemon src/main.ts",
+    "start:pm2": "pm2 start ./dist/main.js --name telegram-bot-forward",
+    "stop:pm2": "pm2 stop telegram-bot-forward",
+    "logs:pm2": "pm2 logs telegram-bot-forward"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node-telegram-bot-api": "^0.64.3",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-telegram-bot-api": "^0.65.1",
+    "winston": "^3.12.0"
+  }
+}
